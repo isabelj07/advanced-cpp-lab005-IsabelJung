@@ -56,6 +56,8 @@ TEST_CASE("Duplicate detection should be measurably faster with the efficient al
 }
 
 TEST_CASE("Most frequent value matches in both implementations") {
+    REQUIRE_THROWS_AS(mostFrequentNaive({}), std::invalid_argument);
+    REQUIRE_THROWS_AS(mostFrequentEfficient({}), std::invalid_argument);
     REQUIRE(mostFrequentNaive({1, 2, 3, 4}) == 1);
     REQUIRE(mostFrequentEfficient({1, 2, 3, 4}) == 1);
     REQUIRE(mostFrequentNaive({5, 5, 5, 5}) == 5);

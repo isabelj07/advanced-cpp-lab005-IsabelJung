@@ -26,7 +26,7 @@ test: $(BUILD_DIR)/test_algorithms
 	./$(BUILD_DIR)/test_algorithms
 
 benchmark: $(BUILD_DIR)/benchmark_app
-	./$(BUILD_DIR)/benchmark_app 1000 5
+	./$(BUILD_DIR)/benchmark_app 10000 5
 
 clean:
 	rm -rf $(BUILD_DIR)

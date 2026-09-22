@@ -30,7 +30,7 @@ std::vector<int> buildCommonBenchmarkLeft(std::size_t n) {
     std::vector<int> values;
     values.reserve(n);
     for (std::size_t i = 0; i < n; ++i) {
-        values.push_back(static_cast<int>(i) % 19);
+        values.push_back(static_cast<int>(i));
     }
     return values;
 }
@@ -39,7 +39,7 @@ std::vector<int> buildCommonBenchmarkRight(std::size_t n) {
     std::vector<int> values;
     values.reserve(n);
     for (std::size_t i = 0; i < n; ++i) {
-        values.push_back(static_cast<int>(i * 13) % 19);
+        values.push_back(static_cast<int>(i + n / 2));
     }
     return values;
 }

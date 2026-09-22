@@ -177,4 +177,11 @@ make test
 make benchmark
 ```
 
+The benchmark command runs five trials at input sizes 1,000 and 10,000. The
+naive frequency and common-element algorithms are quadratic in their input
+sizes, so running them at 100,000 or 1,000,000 elements would require an
+impractically large number of comparisons. To collect larger efficient-solution
+measurements, run the benchmark executable with a larger maximum size after
+building it, for example `./build/benchmark_app 1000000 5`.
+
 The goal is to understand performance, not to create complex problem statements. The assignment is intentionally simple so that students focus on observing the practical effects of algorithmic complexity.
